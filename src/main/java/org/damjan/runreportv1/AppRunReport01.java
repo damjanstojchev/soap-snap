@@ -10,6 +10,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+
 public class AppRunReport01 {
     public static void main(String[] args) {
         String url = "https://fa-euth-dev31-saasfademo1.ds-fa.oraclepdemos.com:443/xmlpserver/services/ExternalReportWSSService";
@@ -55,6 +56,7 @@ public class AppRunReport01 {
                     + "    </soap:Body>"
                     + "</soap:Envelope>";
 
+
             httpPost.setHeader("Content-Type", "application/soap+xml");
             httpPost.setEntity(new org.apache.http.entity.StringEntity(soapEnvelope, "UTF-8"));
 
@@ -66,7 +68,7 @@ public class AppRunReport01 {
             // Print the response
             if (responseEntity != null) {
                 String responseBody = EntityUtils.toString(responseEntity);
-                System.out.println(responseBody);
+                System.out.println(responseBody.toString());
             }
 
         } catch (Exception e) {
