@@ -58,6 +58,7 @@ public class RunReportV2 {
                     + "        </pub:runReport>"
                     + "    </soap:Body>"
                     + "</soap:Envelope>";
+            System.out.println(soapEnvelope);
             // Headers
             httpPost.setHeader("Content-Type", "application/soap+xml");
 
